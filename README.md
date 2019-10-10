@@ -2,7 +2,7 @@
 
 ## Complexity
 
-This repo covers 8 sorting algorithms and folowing table shows the time complexity and space complexity.
+This repo covers 8 sorting algorithms and folowing table shows the time complexity and space complexity. n is the size of the array and the data range is 0 <= element <= k
 
 | Algorithm  | Average case | Best case | Worst case | Space complexity | Stability |
 | ---------- | -----------: | --------: | ---------: | ---------------: | --------: |
@@ -17,7 +17,7 @@ This repo covers 8 sorting algorithms and folowing table shows the time complexi
 
 ## Benchmark
 
-Following table shows the benchmark of a random generated array 0 <= element < 2^31 and n is the size of the array
+Following table shows the benchmark of a random generated array 0 <= element < 2^31. All elements in array are integers and all results are in second level.
 
 | Algorithm  | n=10^3 | n=10^4 | n=10^5 |   n=10^6 | n=10^7 | n=10^8 |   n=10^9 |
 | ---------- | -----: | -----: | -----: | -------: | -----: | -----: | -------: |
@@ -30,7 +30,7 @@ Following table shows the benchmark of a random generated array 0 <= element < 2
 | CountSort  |  7.541 |  6.898 |  6.924 |    8.112 |  9.409 | 31.252 |        / |
 | RadixSort  |  0.000 |  0.000 |  0.008 |    0.066 |  0.638 |  6.432 |        / |
 
-Since bubble sort, insertion sort and selection sort are much slower than other sorting algorithms, there is no test on them. Counting sort and radix sort require too much memory when n=10^9, so there is no data for them too. To verify the advantage of linear time sorting algorithm, another test limits the range of 0 <= element < 10^4 and the results is shown below.
+Since bubble sort, insertion sort and selection sort are much slower than other sorting algorithms when n >= 10^7, there is no test on them. Counting sort and radix sort require too much memory when n=10^9, so there is no data for them too. To verify the advantage of linear time sorting algorithm, another test limits the range of 0 <= element < 10^4 and the results are shown below.
 
 | Algorithm | n=10^3 | n=10^4 | n=10^5 | n=10^6 | n=10^7 |  n=10^8 |
 | --------- | -----: | -----: | -----: | -----: | -----: | ------: |
