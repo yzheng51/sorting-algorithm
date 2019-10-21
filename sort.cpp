@@ -154,7 +154,7 @@ void merge(std::vector<int> &arr, int left, int mid, int right) {
 
 void mergeSortHelper(std::vector<int> &arr, int left, int right) {
     if (left < right) {
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
         mergeSortHelper(arr, left, mid);
         mergeSortHelper(arr, mid + 1, right);
         merge(arr, left, mid, right);
